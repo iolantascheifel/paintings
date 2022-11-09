@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+
+body {
+  font-family: "Playfair Display", serif, "Gloria Hallelujah", cursive;
+  background: #f1f3f5;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 1540px;
+  margin: 0 auto;
+  background-color: blue;
+  &.center {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .title {
+    .famous {
+      font-size: 3rem;
+      font-family: "Gloria Hallelujah", cursive;
+    }
+  }
+  .painting-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    // padding: 0 80px;
+    .card {
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  }
+}
+
+.fullscreen {
+  height: 100vh;
+  .painting {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .img {
+      width: 50%;
+      height: 100%;
+      background: #dfdfdf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        cursor: move;
+        width: 500px;
+      }
+    }
+    .painting-details {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .inner {
+        width: 480px;
+        position: relative;
+        .go-back {
+          cursor: pointer;
+          color: #282828;
+          text-decoration: none;
+          text-align: left;
+          position: absolute;
+          top: -124px;
+          left: 0;
+        }
+        .category {
+          font-size: 1rem;
+          color: #424550;
+          font-weight: 500;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 32px;
+        }
+        p {
+          color: #424550;
+          font-weight: 300;
+        }
+        .additonals {
+          margin: 24px 0 48px;
+          span {
+            margin-right: 16px;
+            color: #424550;
+          }
+        }
+      }
+    }
+  }
+}
