@@ -10,16 +10,14 @@ body {
 }
 
 .container {
-  width: 1540px;
-  margin: 0 auto;
+  // width: 1540px;
+  // height: 100%;
+  // margin: 0 auto;
   // background-color: blue;
-  &.center {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   .title {
     .famous {
       font-size: 3rem;
@@ -31,6 +29,8 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 60%;
+    // height: 100%;
+    flex-wrap: wrap;
     .card {
       box-sizing: border-box;
       cursor: pointer;
