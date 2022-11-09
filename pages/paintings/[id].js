@@ -1,15 +1,22 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 const Product = () => {
   const router = useRouter();
 
   return (
-    <div>
+    <motion.div exit={{ opacity: 0 }}>
       <div className="fullscreen">
         <div className="painting">
           <div className="img">
-            <img key={router.query.image} src={router.query.image} />
+            <motion.img
+              key={router.query.imageOne}
+              src={router.query.imageOne}
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            />
           </div>
           <div className="painting-details">
             <div className="inner">
@@ -24,7 +31,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

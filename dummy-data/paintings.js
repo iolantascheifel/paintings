@@ -5,8 +5,7 @@ export const PAINTINGS = [
     artist: "Leonardo da Vinci",
     location: "Louvre Museum (Paris)",
     images: {
-      imageOne:
-        "https://images.unsplash.com/photo-1545990569-98afd2e72852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      imageOne: "./mona-lisa.jpg",
       imageTwo: "./mona-lisa.jpg",
     },
     details: "Details info",
@@ -20,6 +19,18 @@ export const PAINTINGS = [
       imageOne:
         "https://images.unsplash.com/photo-1545990569-98afd2e72852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       imageTwo: "./the-last-supper.jpg",
+    },
+    details: "Details info",
+  },
+  {
+    id: "3",
+    name: "The Starry Night",
+    artist: "Vincent van Gogh",
+    location: "Museum of Modern Art (New York City)",
+    images: {
+      imageOne:
+        "https://images.unsplash.com/photo-1545990569-98afd2e72852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      imageTwo: "./night.png",
     },
     details: "Details info",
   },
