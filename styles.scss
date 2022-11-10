@@ -5,9 +5,22 @@
 body {
   font-family: "Playfair Display", serif, "Gloria Hallelujah", cursive,
     "Montserrat", sans-serif;
-  background: white;
+  background-image: linear-gradient(
+    180deg,
+    hsl(34deg 78% 91%) 0%,
+    hsl(34deg 56% 86%) 18%,
+    hsl(34deg 47% 80%) 29%,
+    hsl(34deg 41% 75%) 38%,
+    hsl(34deg 38% 69%) 46%,
+    hsl(34deg 35% 64%) 54%,
+    hsl(34deg 33% 59%) 63%,
+    hsl(34deg 31% 54%) 73%,
+    hsl(34deg 31% 49%) 85%,
+    hsl(34deg 37% 44%) 100%
+  );
   padding: 0;
   margin: 0;
+  height: 100vh;
 }
 
 .coded-by {
@@ -20,14 +33,29 @@ body {
   color: rgb(59, 59, 59);
 }
 
+.people-container {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.people {
+  max-width: 700px;
+  opacity: 0.8;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+
+  // background-color: darkcyan;
   .title {
     position: relative;
-    line-height: 50px;
+    line-height: 40px;
     .the-most {
       position: relative;
       font-size: 1.5rem;
@@ -35,7 +63,7 @@ body {
     }
     .famous {
       position: relative;
-      left: 30%;
+      left: 20%;
       font-size: 2rem;
       font-size: 2.4rem;
       font-family: "Gloria Hallelujah", cursive;
@@ -43,7 +71,7 @@ body {
     .paintings-text {
       position: relative;
       font-size: 1.5rem;
-      left: 10%;
+      left: 60%;
       font-family: "Montserrat", sans-serif;
       font-weight: 300;
     }
@@ -58,13 +86,27 @@ body {
   }
   .painting-row {
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-around;
     align-items: center;
-    width: 90%;
-    flex-wrap: wrap;
+    width: 70%;
+    // flex-wrap: wrap;
+    padding-left: 20px;
+    gap: 20px;
+    overflow-x: auto;
+    // background-color: deepskyblue;
     .card {
       box-sizing: border-box;
       cursor: pointer;
+
+      .frame-painting {
+        width: 150px;
+        box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+      }
+      .frame-painting:nth-child(4) {
+        width: 350px;
+      }
     }
   }
 }
@@ -79,7 +121,19 @@ body {
     .img-background {
       width: 50%;
       height: 100%;
-      background: #fef3c8;
+      background: linear-gradient(
+        180deg,
+        hsl(180deg 100% 27%) 0%,
+        hsl(180deg 100% 26%) 14%,
+        hsl(180deg 100% 24%) 25%,
+        hsl(180deg 100% 22%) 35%,
+        hsl(180deg 100% 21%) 44%,
+        hsl(180deg 100% 19%) 52%,
+        hsl(180deg 100% 17%) 60%,
+        hsl(180deg 100% 16%) 68%,
+        hsl(180deg 100% 14%) 78%,
+        hsl(180deg 100% 13%) 100%
+      );
       display: flex;
       align-items: center;
       justify-content: center;
@@ -88,6 +142,9 @@ body {
         cursor: move;
         max-width: 500px;
         width: 100%;
+        box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
       }
     }
     .painting-details {
@@ -97,6 +154,7 @@ body {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      background-color: antiquewhite;
 
       .inner {
         max-width: 480px;

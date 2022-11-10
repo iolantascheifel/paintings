@@ -107,4 +107,16 @@ export const PAINTINGS = [
     },
     details: "Details info",
   },
+  {
+    id: "10",
+    name: "The Persistence of Memory",
+    artist: "Salvador Dalí",
+    location: "	Museum of Modern Art (New York City)",
+    images: {
+      imageOne:
+        "https://live.staticflickr.com/3956/15694508911_30fc70b1e1_b.jpg",
+      imageTwo: "./memory.png",
+    },
+    details: "Details info",
+  },
 ];

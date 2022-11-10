@@ -51,12 +51,16 @@ const Index = () => {
                 <img
                   key={painting.images.imageTwo}
                   src={painting.images.imageTwo}
-                  width={300}
+                  width={230}
+                  className="frame-painting"
                 />
               </motion.div>
             </Link>
           ))}
         </motion.div>
+      </div>
+      <div className="people-container">
+        <img src="./people1.png" alt="people" className="people" />
       </div>
     </motion.div>
   );
