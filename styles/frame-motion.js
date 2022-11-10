@@ -36,6 +36,22 @@ export const fadeInLeft = {
   },
 };
 
+export const fadeInRight = {
+  initial: {
+    x: 60,
+    opacity: 0,
+    transition: { duration: 0.8, ease: easing },
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: easing,
+    },
+  },
+};
+
 export const stagger = {
   animate: {
     transition: {

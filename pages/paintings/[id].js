@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { fadeInLeft, fadeInUp, stagger } from "../../styles/frame-motion";
+import {
+  fadeInLeft,
+  fadeInRight,
+  fadeInUp,
+  stagger,
+} from "../../styles/frame-motion";
 
 const Product = () => {
   const router = useRouter();
@@ -17,7 +22,7 @@ const Product = () => {
           >
             <img key={router.query.imageOne} src={router.query.imageOne} />
           </motion.div>
-          <div className="painting-details">
+          <motion.div className="painting-details" variants={fadeInRight}>
             <motion.div className="inner" variants={stagger}>
               <Link href="/">
                 <motion.div variants={fadeInUp}>
@@ -37,7 +42,7 @@ const Product = () => {
                 {router.query.details}
               </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.div>

@@ -1,6 +1,7 @@
 export const PAINTINGS = [
   {
     id: "1",
+    width: "10",
     name: "Mona Lisa",
     artist: "Leonardo da Vinci",
     location: "Louvre Museum (Paris)",
@@ -13,6 +14,7 @@ export const PAINTINGS = [
   },
   {
     id: "2",
+    width: "13",
     name: "The Last Supper",
     artist: "Leonardo da Vinci",
     location: "Santa Maria delle Grazie (Milan, Italy)",
@@ -25,18 +27,20 @@ export const PAINTINGS = [
   },
   {
     id: "3",
+    width: "10",
     name: "The Starry Night",
     artist: "Vincent van Gogh",
     location: "Museum of Modern Art (New York City)",
     images: {
       imageOne:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
-      imageTwo: "./night.png",
+      imageTwo: "./night.jpg",
     },
     details: "Details info",
   },
   {
     id: "4",
+    width: "11",
     name: "The Scream",
     artist: "Edvard Munch",
     location: "National Museum (Oslo, Norway -- opening in 2020)",
@@ -49,18 +53,20 @@ export const PAINTINGS = [
   },
   {
     id: "5",
+    width: "13",
     name: "The Birth of Venus",
     artist: "Sandro Botticelli",
     location: " Le Gallerie Degli Uffizi (Florence, Italy)",
     images: {
       imageOne:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Birth_of_Venus_%28Botticelli%29_2015.jpg/1600px-The_Birth_of_Venus_%28Botticelli%29_2015.jpg?20151208091908",
-      imageTwo: "./venus.png",
+      imageTwo: "./venus.jpg",
     },
     details: "Details info",
   },
   {
     id: "6",
+    width: "10",
     name: "Girl With a Pearl Earring",
     artist: "Johannes Vermeer",
     location: "Mauritshuis (The Hague, Netherlands)",
@@ -74,6 +80,7 @@ export const PAINTINGS = [
 
   {
     id: "8",
+    width: "10",
     name: "The Great Wave off Kanagawa",
     artist: "Katsushika Hokusai",
     location: "Metropolitan Museum of Art (USA)",
@@ -86,6 +93,7 @@ export const PAINTINGS = [
   },
   {
     id: "7",
+    width: "9",
     name: "American Gothic",
     artist: "Grant Wood",
     location: "Art Institute of Chicago (USA)",
@@ -98,24 +106,26 @@ export const PAINTINGS = [
   },
   {
     id: "9",
+    width: "11",
     name: "The Son of Man",
     artist: "René Magritte",
     location: "Private collection",
     images: {
       imageOne: "https://live.staticflickr.com/2411/2065975725_16a8dd1958.jpg",
-      imageTwo: "./son.png",
+      imageTwo: "./man.jpg",
     },
     details: "Details info",
   },
   {
     id: "10",
+    width: "12",
     name: "The Persistence of Memory",
     artist: "Salvador Dalí",
     location: "	Museum of Modern Art (New York City)",
     images: {
       imageOne:
         "https://live.staticflickr.com/3956/15694508911_30fc70b1e1_b.jpg",
-      imageTwo: "./memory.png",
+      imageTwo: "./clock.jpg",
     },
     details: "Details info",
   },

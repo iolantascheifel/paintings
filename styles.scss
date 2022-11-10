@@ -20,7 +20,8 @@ body {
   );
   padding: 0;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
 }
 
 .coded-by {
@@ -31,20 +32,6 @@ body {
   font-size: 12px;
   text-align: center;
   color: rgb(59, 59, 59);
-}
-
-.people-container {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.people {
-  max-width: 700px;
-  opacity: 0.8;
 }
 
 .container {
@@ -86,26 +73,26 @@ body {
   }
   .painting-row {
     display: flex;
-    // justify-content: space-around;
     align-items: center;
-    width: 70%;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
     padding-left: 20px;
     gap: 20px;
-    overflow-x: auto;
-    // background-color: deepskyblue;
+
     .card {
       box-sizing: border-box;
       cursor: pointer;
 
-      .frame-painting {
-        width: 150px;
-        box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
-      }
-      .frame-painting:nth-child(4) {
-        width: 350px;
+      $i: 20;
+      @while $i <= 500 {
+        .size-#{$i} {
+          width: #{$i}px !important;
+          box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 2px 10px 21px 0px rgba(0, 0, 0, 0.75);
+        }
+        $i: $i + 1;
       }
     }
   }
@@ -154,7 +141,19 @@ body {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      background-color: antiquewhite;
+      background-image: linear-gradient(
+        180deg,
+        hsl(34deg 78% 91%) 0%,
+        hsl(34deg 66% 88%) 18%,
+        hsl(34deg 58% 85%) 29%,
+        hsl(34deg 53% 83%) 38%,
+        hsl(34deg 50% 80%) 46%,
+        hsl(34deg 47% 77%) 54%,
+        hsl(34deg 45% 74%) 63%,
+        hsl(34deg 43% 71%) 73%,
+        hsl(34deg 42% 69%) 85%,
+        hsl(34deg 40% 66%) 100%
+      );
 
       .inner {
         max-width: 480px;
