@@ -1,33 +1,42 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { fadeInLeft, fadeInUp, stagger } from "../../styles/frame-motion";
 
 const Product = () => {
   const router = useRouter();
 
   return (
-    <motion.div exit={{ opacity: 0 }}>
+    <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <div className="fullscreen">
         <div className="painting">
-          <div className="img">
-            <motion.img
-              key={router.query.imageOne}
-              src={router.query.imageOne}
-              initial={{ y: 40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            />
-          </div>
+          <motion.div
+            className="img-background"
+            variants={fadeInLeft}
+            transition={{ delay: 0.2 }}
+          >
+            <img key={router.query.imageOne} src={router.query.imageOne} />
+          </motion.div>
           <div className="painting-details">
-            <div className="inner">
+            <motion.div className="inner" variants={stagger}>
               <Link href="/">
-                <div>
+                <motion.div variants={fadeInUp}>
                   <a className="go-back">Back to all paintings</a>
-                </div>
+                </motion.div>
               </Link>
-              <h1>{router.query.name}</h1>
-              <p>{router.query.details}</p>
-            </div>
+              <motion.div className="name" variants={fadeInUp}>
+                {router.query.name}
+              </motion.div>
+              <motion.div className="artist" variants={fadeInUp}>
+                {router.query.artist}
+              </motion.div>
+              <motion.div className="location" variants={fadeInUp}>
+                {router.query.location}
+              </motion.div>
+              <motion.div className="description" variants={fadeInUp}>
+                {router.query.details}
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

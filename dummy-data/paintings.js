@@ -71,6 +71,19 @@ export const PAINTINGS = [
     },
     details: "Details info",
   },
+
+  {
+    id: "8",
+    name: "The Great Wave off Kanagawa",
+    artist: "Katsushika Hokusai",
+    location: "Metropolitan Museum of Art (USA)",
+    images: {
+      imageOne:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tsunami_by_hokusai_19th_century.jpg/700px-Tsunami_by_hokusai_19th_century.jpg",
+      imageTwo: "./wave.jpg",
+    },
+    details: "Details info",
+  },
   {
     id: "7",
     name: "American Gothic",
@@ -80,6 +93,17 @@ export const PAINTINGS = [
       imageOne:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/600px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg",
       imageTwo: "./american.jpg",
+    },
+    details: "Details info",
+  },
+  {
+    id: "9",
+    name: "The Son of Man",
+    artist: "René Magritte",
+    location: "Private collection",
+    images: {
+      imageOne: "https://live.staticflickr.com/2411/2065975725_16a8dd1958.jpg",
+      imageTwo: "./son.png",
     },
     details: "Details info",
   },

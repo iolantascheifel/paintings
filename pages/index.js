@@ -1,51 +1,28 @@
 import Link from "next/link";
 import { PAINTINGS } from "../dummy-data/paintings";
 import { motion } from "framer-motion";
-
-// Our custom easing
-let easing = [0.6, -0.05, 0.01, 0.99];
-
-// animate: defines animation
-// initial: defines initial state of animation or stating point.
-// exit: defines animation when component exits
-
-// Custom variant
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 0,
-    transition: { duration: 0.8, ease: easing },
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: easing,
-    },
-  },
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+import { fadeInUp, stagger } from "../styles/frame-motion";
 
 const Index = () => {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <div className="container center">
+      <div className="coded-by">
+        Designed and coded by <br /> Iolanta Scheifel
+      </div>
+      <div className="container">
         <motion.div
           className="title"
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
         >
-          <div>The most</div>
+          <div className="the-most">The most</div>
           <div className="famous">famous</div>
-          <div>paintings</div>
+          <div className="paintings-text">paintings</div>
+        </motion.div>
+        <motion.div className="main-page-desc" variants={fadeInUp}>
+          Enhance your knowledge of the most famous paintings. Click on each
+          painting and get to know it better. You will find interesting facts
+          and stories that you can tell on your next meeting with friends.
         </motion.div>
         <motion.div variants={stagger} className="painting-row">
           {PAINTINGS.map((painting) => (
