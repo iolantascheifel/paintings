@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
@@ -8,8 +9,15 @@ import {
   stagger,
 } from "../../styles/frame-motion";
 
-const Product = () => {
+const Painting = () => {
+  const [isFact, setIsFact] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    if (router.query.fact) {
+      setIsFact(true);
+    }
+  }, [router.query.fact]);
 
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
@@ -41,6 +49,14 @@ const Product = () => {
               <motion.div className="description" variants={fadeInUp}>
                 {router.query.details}
               </motion.div>
+              {isFact && (
+                <motion.div>
+                  <motion.div className="fact-question">
+                    Did you know?
+                  </motion.div>
+                  <motion.div className="fact">{router.query.fact}</motion.div>
+                </motion.div>
+              )}
             </motion.div>
           </motion.div>
         </div>
@@ -49,4 +65,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Painting;

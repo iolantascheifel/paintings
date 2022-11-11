@@ -39,6 +39,7 @@ const Index = () => {
                   location: painting.location,
                   imageOne: painting.images.imageOne,
                   imageTwo: painting.images.imageTwo,
+                  fact: painting.fact,
                 },
               }}
             >
@@ -51,7 +52,7 @@ const Index = () => {
                 <img
                   key={painting.images.imageTwo}
                   src={painting.images.imageTwo}
-                  className={`size-${painting.width * 17}`}
+                  className={`size-${painting.width * 16}`}
                 />
               </motion.div>
             </Link>

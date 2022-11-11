@@ -67,8 +67,8 @@ body {
     max-width: 500px;
     width: 80%;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     line-height: 25px;
   }
   .painting-row {
@@ -175,6 +175,7 @@ body {
         .artist {
           margin-bottom: 30px;
           font-size: 1.1rem;
+          font-weight: bold;
         }
         .location {
           margin-bottom: 30px;
@@ -183,8 +184,23 @@ body {
         }
 
         .description {
-          font-size: 1rem;
+          font-size: 0.75rem;
           font-family: "Montserrat", sans-serif;
+          line-height: 18px;
+          letter-spacing: 0.5px;
+        }
+
+        .fact-question {
+          margin-top: 30px;
+          font-family: "Gloria Hallelujah", cursive;
+          letter-spacing: 1px;
+        }
+
+        .fact {
+          font-size: 0.75rem;
+          margin-top: 10px;
+          line-height: 20px;
+          letter-spacing: 0.8px;
         }
       }
     }
